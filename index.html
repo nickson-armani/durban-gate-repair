@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Durban Gate Motor Repairs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f7f8fc, #edf1f5);
+      color: #222;
+    }
+
+    header {
+      background: #004b8d;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      justify-content: space-between;
+    }
+
+    .highlight-box {
+      flex: 1 1 250px;
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .highlight-box h3 {
+      margin-bottom: 0.5rem;
+      color: #004b8d;
+    }
+
+    .highlight-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background: #004b8d;
+      color: white;
+      padding: 0.9rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #003a6b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .highlights {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Durban Gate Motor Repairs</h1>
+    <p>Fast, affordable, and expert gate motor servicing across all suburbs</p>
+  </header>
+
+  <main class="container">
+    <section class="highlights">
+      <div class="highlight-box">
+        <h3>🔧 Same-Day Repairs</h3>
+        <p>Technicians ready across Durban to get your gate moving again today.</p>
+      </div>
+      <div class="highlight-box">
+        <h3>📍 All Suburbs</h3>
+        <p>From Umhlanga to Chatsworth, we cover the full Durban metro area.</p>
+      </div>
+      <div class="highlight-box">
+        <h3>📞 Fast Callbacks</h3>
+        <p>Submit the form and get a response within minutes—guaranteed.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Request a Callback</h2>
+      <form action="#" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="suburb">Your Suburb</label>
+        <select id="suburb" name="suburb" required>
+          <option value="">Select suburb</option>
+          <option>Umhlanga</option>
+          <option>Durban North</option>
+          <option>Pinetown</option>
+          <option>Bluff</option>
+          <option>Chatsworth</option>
+          <option>Amanzimtoti</option>
+          <option>Westville</option>
+          <option>Queensburgh</option>
+          <option>Other</option>
+        </select>
+
+        <label for="problem">What's the issue?</label>
+        <textarea id="problem" name="problem" rows="4" placeholder="E.g. gate not responding, motor clicking, etc." required></textarea>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Durban Gate Motor Repairs. All rights reserved.
+  </footer>
+</body>
+</html>
