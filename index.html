@@ -9,65 +9,81 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f7f8fc, #edf1f5);
-      color: #222;
+      background-color: #f3f4f6;
+      color: #1f2937;
     }
 
     header {
-      background: #004b8d;
-      color: #fff;
-      padding: 3rem 1rem;
+      background: url('https://images.unsplash.com/photo-1581091870622-81a6ac4c929e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white;
+      padding: 4rem 1rem;
       text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 2rem auto;
       padding: 1rem;
     }
 
     .highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
     }
 
     .highlight-box {
-      flex: 1 1 250px;
-      background: #fff;
-      padding: 1.2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      text-align: center;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .highlight-box:hover {
+      transform: translateY(-4px);
     }
 
     .highlight-box h3 {
-      margin-bottom: 0.5rem;
       color: #004b8d;
+      margin-bottom: 0.5rem;
     }
 
     .highlight-box p {
       font-size: 0.95rem;
-      color: #555;
+      color: #4b5563;
     }
 
     form {
-      background: #fff;
+      background: white;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
     }
 
     form label {
@@ -78,61 +94,65 @@
 
     input, select, textarea {
       width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 0.9rem;
+      margin-top: 0.4rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
       font-size: 1rem;
+      background-color: #f9fafb;
     }
 
     button {
-      margin-top: 1.5rem;
+      margin-top: 1.8rem;
       background: #004b8d;
       color: white;
-      padding: 0.9rem 1.5rem;
+      padding: 1rem 1.6rem;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 1rem;
+      transition: background 0.2s ease;
     }
 
     button:hover {
-      background: #003a6b;
+      background: #003366;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #777;
-    }
-
-    @media (max-width: 600px) {
-      .highlights {
-        flex-direction: column;
-      }
+      color: #6b7280;
+      background: #f1f5f9;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Durban Gate Motor Repairs</h1>
-    <p>Fast, affordable, and expert gate motor servicing across all suburbs</p>
+    <p>Get fast, professional gate motor help — anywhere in Durban, same-day response guaranteed.</p>
   </header>
 
   <main class="container">
     <section class="highlights">
       <div class="highlight-box">
-        <h3>Same-Day Repairs</h3>
-        <p>Technicians ready across Durban to get your gate moving again today.</p>
+        <h3>🚀 Same-Day Service</h3>
+        <p>Technicians on standby to assist with emergencies and breakdowns—fast turnaround.</p>
       </div>
       <div class="highlight-box">
-        <h3>All Suburbs</h3>
-        <p>From Umhlanga to Chatsworth, we cover the full Durban metro area.</p>
+        <h3>📍 All Suburbs Covered</h3>
+        <p>Serving Umhlanga, Bluff, Chatsworth, Pinetown, and every part of Durban metro.</p>
       </div>
       <div class="highlight-box">
-        <h3>Fast Callbacks</h3>
-        <p>Submit the form and get a response within minutes—guaranteed.</p>
+        <h3>📞 Fast Callbacks</h3>
+        <p>Submit your request and get a call within minutes. No waiting, no hassle.</p>
       </div>
     </section>
 
@@ -159,8 +179,8 @@
           <option>Other</option>
         </select>
 
-        <label for="problem">What's the issue?</label>
-        <textarea id="problem" name="problem" rows="4" placeholder="E.g. gate not responding, motor clicking, etc." required></textarea>
+        <label for="problem">Describe the issue</label>
+        <textarea id="problem" name="problem" rows="4" placeholder="E.g. gate not opening, motor making noise, etc." required></textarea>
 
         <button type="submit">Send Request</button>
       </form>
@@ -168,8 +188,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Durban Gate Motor Repairs. All rights reserved.
+    &copy; 2025 Durban Gate Motor Repairs. Powered by Local LeadLink.
   </footer>
 </body>
 </html>
-
